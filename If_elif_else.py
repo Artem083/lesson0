@@ -7,5 +7,7 @@ elif first == second and not first == third:  # - Если хотя бы 2 из 
     print(2)
 elif first == third and not second == first:
     print(2)
+elif second == third and not first == second:
+    print(2)
 else:
     print(3)    # - Если все числа равны между собой, то вывести 3
