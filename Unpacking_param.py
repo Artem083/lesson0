@@ -44,14 +44,14 @@ print_params(*spisok_list, **spisok_dict)
 # Создайте список values_spisok_2 с двумя элементами разных типов
 # Проверьте, работает ли print_params(*values_spisok_2, 42)
 
-values_list_2 = (54.32, 'Строка')
+values_list2 = (54.32, 'Строка')
 
 
-def print_params(*values_spisok_2):
-    print(*values_spisok_2)
+def print_params(*valueslist_2):
+    print(*valueslist_2)
 
 
-print_params(*values_list_2, 42)
+print_params(*values_list2, 42)
 
 #   ЛЕКЦИЯ ДЕНИСА ПИКАЕВА
 # def print_params(a, b, c):   # *args, **kwargs
