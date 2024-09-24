@@ -29,73 +29,14 @@ print_params(c=[1, 2, 3])  # print_params(c = [1,2,3])
 # Передайте values_list и values_dict в функцию print_params,
 # используя распаковку параметров (* для списка и ** для словаря).
 
-spisok_list = [99, 126, 'закорючка', False]
-spisok_dict = {'a': 99, 'b': 126, 'c': 'шлямбур', 'd': True}
-
-
-def print_params(*values_list, **values_dict):
-    print(*values_list)
-    return values_dict
-
-
-print_params(*spisok_list, **spisok_dict)
+spisok_list = [99, 126, 'закорючка']
+spisok_dict = {'a': 99, 'b': 126, 'c': 'шлямбур'}
+print_params(*spisok_list)
+print_params(**spisok_dict)
 
 # 3.Распаковка + отдельные параметры:
 # Создайте список values_spisok_2 с двумя элементами разных типов
 # Проверьте, работает ли print_params(*values_spisok_2, 42)
 
 values_list2 = (54.32, 'Строка')
-
-
-def print_params(*valueslist_2):
-    print(*valueslist_2)
-
-
 print_params(*values_list2, 42)
-
-#   ЛЕКЦИЯ ДЕНИСА ПИКАЕВА
-# def print_params(a, b, c):   # *args, **kwargs
-#     print(a, b, c)
-
-# def print_params(*args):   # *args, **kwargs
-#     print(a, b, c)
-
-
-# def print_params(*params):   # *args, **kwargs
-#     print(*params)
-#
-#
-# print_params(1, 2, 3, 4, 5, 6, 7)
-
-
-# def print_params(*params):   # *args, **kwargs
-#     print(*params)
-#
-#
-# print_params()
-
-
-# def print_params(a, b, c):   # *args, **kwargs
-#     print(a, b, c)
-#     print(c)
-#
-# list_ = [1, 2]
-# print_params(*list_, 4)
-
-
-# def print_params(**kwargs):
-#     for key, value in kwargs.items():
-#         print(key, value)
-#
-#
-# dict_ = {'a': 1, 'b': 2, 'd': 3,}
-# print_params(**dict_)
-
-
-# def print_params(a, b, c):    # *args, **kwargs
-#     print(a, b, c)
-#
-#
-# list_ = [1, 2]
-# dict_ = {'c': 3}
-# print_params(*list_, **dict_)
