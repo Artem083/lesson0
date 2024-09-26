@@ -8,14 +8,13 @@
 # Функция должна выводить эти параметры.
 # Вызовите функцию print_params с разным количеством аргументов, включая вызов без аргументов.
 # Проверьте, работают ли вызовы print_params(b = 25) print_params(c = [1,2,3])
-def print_params(a=1, b='строка', c=True):  # 1.Функция с параметрами по умолчанию:
+def print_params(a: any = 1, b: any = 'строка', c: any = True):  # 1.Функция с параметрами по умолчанию:
     print(a, b, c)
 
 
 print_params(5, 'kdjjk')  # Вызовите функцию print_params с разным количеством аргументов,
 print_params(8)
 print_params(2, 'jhlfksjh', False)
-print_params('Zachem')
 print_params(True)
 print_params(0)
 print_params()  # включая вызов без аргументов.
