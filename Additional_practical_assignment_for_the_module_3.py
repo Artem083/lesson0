@@ -83,5 +83,7 @@ def calculate_structure_sum(*args):
             pass
     return total_sum
 
- 
-print(calculate_structure_sum(data_structure))
+
+result = calculate_structure_sum(data_structure)
+print(result)
+
