@@ -10,7 +10,6 @@ def hash_password(password):
 class User:
 
     def __init__(self, nickname, password, age):
-
         self.nickname = nickname
 
         self.password = hash_password(password)
@@ -21,17 +20,14 @@ class User:
         """Переопределяем метод сравнения, чтобы проверять пользователя по имени пользователя."""
         return self.nickname == other.nickname
 
-
     def __str__(self):
         # return f"User(nickname='{self.nickname}', age={self.age})"
         return f"{self.nickname}"
 
 
-
 class Video:
 
     def __init__(self, title, duration, adult_mode=False):
-
         self.title = title
 
         self.duration = duration
@@ -40,15 +36,12 @@ class Video:
 
         self.adult_mode = adult_mode
 
-
     def __eq__(self, other):
         """Переопределяем метод сравнения, чтобы проверять видео по заголовку."""
         return self.title.lower() == other.title.lower()
 
-
     def __str__(self):
         return f"Video(title='{self.title}', duration={self.duration}, adult_mode={self.adult_mode})"
-
 
 
 class UrTube:
@@ -61,19 +54,16 @@ class UrTube:
 
         self.current_user = None
 
-
     def log_in(self, nickname, password):
         """Проверяет наличие пользователя с указанным логином и паролем."""
         hashed_password = hashlib.sha256(password.encode()).hexdigest()
         for user in self.users:
             if user.nickname == nickname and user.password == hashed_password:
-
                 self.current_user = user
                 print(f"Пользователь {nickname} вошёл в систему.")
                 return True
         print("Ошибка входа: неверный логин или пароль.")
         return False
-
 
     def register(self, nickname, password, age):
         """Регистрирует нового пользователя и автоматически выполняет вход."""
@@ -87,7 +77,6 @@ class UrTube:
             self.current_user = new_user
             # print(f"Пользователь {nickname} успешно зарегистрирован и вошёл в систему.")
 
-
     def log_out(self):
         """Выходит из текущего пользователя."""
         if self.current_user:
@@ -96,23 +85,20 @@ class UrTube:
         else:
             print("В системе нет активного пользователя.")
 
-
     def add(self, *videos):
         """Добавляет новые видео в список, если видео с таким названием ещё нет."""
         for video in videos:
             if video not in self.videos:
-               self.videos.append(video)
+                self.videos.append(video)
                 # print(f"Видео '{video.title}' добавлено.")
             # else:
-                # print(f"Видео '{video.title}' уже существует.")
-
+            # print(f"Видео '{video.title}' уже существует.")
 
     def get_videos(self, search_term):
         """Возвращает список названий видео, содержащих поисковое слово (регистр не учитывается)."""
         search_term_lower = search_term.lower()
 
         return [video.title for video in self.videos if search_term_lower in video.title.lower()]
-
 
     def watch_video(self, title):
         """Воспроизводит видео, если пользователь вошёл в систему и имеет право на просмотр."""
