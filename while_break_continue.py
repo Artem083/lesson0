@@ -1,19 +1,13 @@
 my_list = [42, 69, 322, 13, 0, 99, -5, 9, 8, 7, -6, 5]
-s = 0
 i = 0
 while i < len(my_list):
     number = my_list[i]
-    S = my_list[i] - my_list[i]
+    number - my_list[i]
     if number > 0:
-     print(number)
+        print(number)
     i = i + 1
     if number < 0:
-            break
-
-
-
-
-
+        break
 
 
 # number = my_list[i]
