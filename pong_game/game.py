@@ -6,8 +6,7 @@ SCREEN_TITLE = "Pong Game"
 
 class Bar(arcade.Sprite):
     def __init__(self):
-            super().__
-
+            super().__init__('bar.png', 1.0)
 
 
 class Game(arcade.Window):
