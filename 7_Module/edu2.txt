@@ -1,8 +1,2 @@
-hellohello worldhello world
-hello world
-hello world
-hello world
-hello world
-hello world
-hello world
-hello world
+Привет, я новый текст
+Вторая строка нового текста

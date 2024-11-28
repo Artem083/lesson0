@@ -1,6 +1,10 @@
+import io
 from pprint import pprint
 
+
 name = 'edu2.txt'
-file = open(name, 'a') # режимы открытия файла: чтение, запись, добавление    # r, w, a read, write, append
-file.write('\nhello world')
-file.close()
+with  open(name, encoding ='utf-8') as file:
+    for line in file:
+        for char in line:
+            print(line, end='')
+    print(file.tell())
